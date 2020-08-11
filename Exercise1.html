@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Danielle_Exercise1</title>
+        <script language="JavaScript" type="text/JavaScript">
+            
+            
+            //Step1. declare variables
+            var penalty1 = 1.02;
+            var penalty2 = 1.03;
+            var totalOwning = 0.0;
+
+            //Step2. Prompt the user to imput the personal infomations and the account balance
+            var fullName = prompt("Enter your full name:", "No Name");
+            var address = prompt("Enter your Address:", "No Address");
+            var city = prompt("Enter your City:", "London");
+            var Province = prompt("Enter your Province:", "Ontario");
+            var accountBalance = prompt("Enter your Account Balance:", "0.0");
+
+            //Step3. Convert the variable account balance to float
+           accountBalance = parseFloat(accountBalance);
+           
+            //Step4. Calculate the penalty according to account balance amount, if between 1 and 999 - 2%, if greater than or equal to 1000 - 3%
+
+           
+            if (accountBalance > 0 && accountBalance < 1000 ) 
+            {
+                getPrint();
+                totalOwning = accountBalance * penalty1;
+                document.write("Total Owning: " + totalOwning +"<br>");
+
+            }
+            else if(accountBalance >= 1000)
+            {
+                getPrint();
+                totalOwning = accountBalance * penalty2;
+                document.write("Total Owning: " + totalOwning +"<br>");
+            }
+            else if(accountBalance === 0)
+            {
+                getPrint();
+                document.write("Thank-you for your payment.<br>");
+            }
+
+            // Step5. Function to print comum information
+            function getPrint(){
+                document.write("Full Name:" + fullName +"<br>");
+                document.write("Address: " + address +"<br>");
+                document.write("City: " + city +"<br>");
+                document.write("Province: " + Province +"<br>");
+                document.write("Account Balance: " + accountBalance +"<br>");
+            }//end function
+            
+
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
